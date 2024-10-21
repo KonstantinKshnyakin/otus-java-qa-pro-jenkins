@@ -1,0 +1,8 @@
+---
+- project:
+    name: 'Autotests'
+    jobs:
+      - 'ui-tests'
+      - 'api-tests'
+      - 'mobile-tests'
+      - 'trigger-test-jobs'

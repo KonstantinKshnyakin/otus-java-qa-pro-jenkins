@@ -1,0 +1,9 @@
+- job-template:
+    name: 'api-tests'
+    project-type: pipeline
+    pipeline-scm:
+      scm:
+        - git:
+            url: https://github.com/KonstantinKshnyakin/otus-java-qa-pro-api.git
+            branches:
+              - 'master'

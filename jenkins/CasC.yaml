@@ -1,0 +1,337 @@
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - basicSSHUserPrivateKey:
+              id: "jenkins-gh"
+              privateKeySource:
+                directEntry:
+                  privateKey: "{AQAAABAAAApQmwzb/u40+WJsPB0oB6Jw1GG3tcdnL+ZwF3BlD9xAcseex03iAT9opQxltnQli4TWLZDK0UA/V2DVzZgEX4Ot+grpifBDH8sz7Ddd77rRFETqKOo0eb1BTQvqfiwYha45sSxX251sOwb2PStEPsD+GLwL95Ut7of0kIxOs92oWRJSJmBPFMsMlp5vmMFl5DroT0RP0t525JrzqmQuqtp2zoT3j+R5k+zDFXyiRAGZS3MjVBFJAwpZSzWeggzUku5Iu5t7gVjwB6EjHDSysy9aGO8JxdZuEBtJ1zTe0F3ytwomCM7Xwyefvx4JAqT+InIVeAFTKBGRNgqMfwuQgPNi6RwObutLPIq7KDRl8SyeNxM6sGH2jjyLchf2Zy0qHwxHN5HHWWjzACsnIoKQWtjKRTBHH9fOerL4QU5GdtvVHiAmEBk7VmKBcwdJLjdHeOOTbTRmni/uB25lR8X6knbGd6voWM4LQTkRg3XNyljSL3c5Dvy9ztoAV9lE9iPUSt58vr9550yy+RjRC/EyRyY+bxOpiPh07i4UGK1LbeQqplQNt6H+uoolOZRpRDEvcjX4o4y/j/uWFuzShXoXoqhRgPMMNEgQS37b5z6eycAc79j61atDQmGYcoysxyVl+arICT8niivDOaNFjEr3Gqz25gitnc6NM27Pa8le+ow5BiNBKb7FuY0AxukPW7eiGSUBZSfwyZJLu7K+BzFLseB8V3uxaDJbOypayxrKLLdvh2spC/etyHOVMFc4iLtsmJayjnfXX5q/PAQngk4y76B1912z6Q9o4egWLEvgmQ88Rdy1an50RVMvzJYvVxzr1VG/Stz+TSTjfD8ssJTMzv0dUpzDxLBT3HG/QCUHV+/8eRwPyxBo5kJy4rsAV/C19G6waGBXscLtffnXLwOeLIeeIgePbfqsf5Q9w/UGjJouurthh2dQ78p0Q5i8hI4+KKMmont4HSaD4QIUdMY/nWl5hyg554hIkTrTGh2bRq8QJotFV3lW3QRRWLrTPcfNXFipa0cx0QlHWsRtnT+qHkrVL9o+xQ+I/Dpo905iCqfLZ1pagdALFac4YDi6eZ4FxtbAqpKxvNaVwWbKpV3iwlFAZGp88hWVE0tjhy2tGpIRwkorQmyag1Bizw4fevubaURlmj0f0srIrERJWKsB0q0DZq735FSYVte2apZATKItvvz5gc55BS6p+vOEq4j3GSPWpPcKs5ADc0sR65BY54YUhrRY5H7iab/NLMosYLcjQKgClYmnYQH3qFMYJy7j9mXLomGkYWyadRxWGcvs3x6pjHzU1MTeT9ALuwnpKExMrTDrljydAP19KKh8Tw+QRSr4Ur/5cbiZTNYRVdLb0kAAw3LmPcqJe5h5UFuPIliMciylN2sKZPsodFkhEC40wNTwuw7xbUn5TdQWXAacMO83CqxdB1H4iI3kfzVazBR5O6Vtq+xZgRH57fJ2LucRkHfwpTTdmqFkdMeD7/ObiNLDJIopQ2pQGGcFNq2wuvokPjdvEB3vNyr1gYlnYcvyhOzGuZqXAviRKeqjo7WX74KzohwDLNS03Qdk5qSuocu+agD4tvMBeSDausVW3GQpzXCz7Bj+ZqLsd51FY5f5LqOei4CQmil34/uCPsbzzk8uP0stx2Bc+j8i+rUOSXFkfoIjX+r0QU0gripXbpNev0ORsBLVGVDJT9gfa0kqwud5qPkHMFfu/rABnkqpY92+rQIBoC7QGmKh1ekUd4i8v8Ab7SmLKKItSLNMYe3Z0XrKVzpaUwIBNZm3tfh1++CaXbXHk0oPyCZZHxPjqD9E7U57NGTHv90riS3zY9hec8yzN8UDiOqNHj8XHQLnboiwJcdDP9doloqsm0grb8tVe8Kemy2eqIck4ODNxq/y3g5h3X9GoKD5jxUWJwhRq+zB02SeRdxItP2T/OP7a14gz8dPOKSZndJZ2jjC5u8kIpWTBmFuyXoWjNt9yUpKQUZ5kuq61jHkiVvUbH4J7odvc1t4tC1PTFRPcRGndaVKcUEkKbrUT9UtbOLZjTB7wxVTMz04dBjomCykovTBLpAiwTycbgFsjQeyInGElFFObzGRO353OSvb4GWpfUCd9NlMEmKd2kJdyUsjhYFEKpopk1uwV8Prp3Y95KfyoXcgGhdbUqKBBTEYBnRG01nW+9jrC5LwUD0knnQzl4+3yMBp9NRYBEUR26wJu0aEDBD/+/dKiQeyM20QIyfNR8C94LzRwv/FLA6BTJs7qsweenLe/qqBCNhPuiMQYpmkZqE1XT97ZdKx7m9thaJPo9JVRgg/xjwowgtaEX8NYpccW66xlHS74z8FcN1Q4SHS5tD8kyFqtz513V2qgebrgF0v0kLV2d1gmmlDRerbp4fIjp0UiS+N6W1U8ufpUat5z2DLA/J/2ZEfVMFX5v/Xk7uBdioLXJkkTtKksq9GhMFIoHypb3+eDgkYb8ivPR2jkHOSDdo1bh2hivgdSVitn4+PW0SIGC3CNtz/5iX8nIoqSYwPqyNYr/BzVNOUrQCG51FT36EyyBhcc24hoaf4x9hfXvH3r6g9nyNCutWCIiE6lHEXcgMeFfCckTAGkoakVQBIhecU7PXGvLHYvDhku92Qr38iOTyFTUv+HZf7/BM5hC+UXUHl9Qc+eBCHt0K4InTNQ7xzk20JOh68XgSMUs52FHdXo9KLncZy07Yl1IjRmwQr0XDLkr3rY4UMn3eTKhaKgCpDH7H/tOSdJBS3GKFS3AtQVOfiZfGlgrONsq1N+XH3T/ymrBoFp4KDHKPfO6jeRRb7EXYGqrGnSSnGW53eegfFphi7YLk/VWAPigung6mEd5zRyvE6z2LgfelsQi5ng6EScXwqs+PnGhbikAlehsYFjEgMApZio/e+UdOClqPDhMLO1h6HrDhX+0ctX6S/pRUkiGS90AwjFn6eO6kZK1TnV4jwfn+xz0RKbLrihORULKbwgI8T/+6atr7D54DhTLTHFs1Qe168W3iFeNXH8e6JdHfdbB17ca5Idhsgz96xfcR11QA4V5DeSpHF66JpTCyaMU1gmjvWS5xYHhx60LxoNx9w6wrH2deWZFb9GVuIO2xLXyskla83vBJxAO0HApEYFAV57f1KcZG5u9GhcmvJhbbIcBor3Q6hgTVjgQKmd5LsH7g43g+ybLIRXGZn6/LEM2w1dkJ+UwcKbrL+tHXjM3fdDBVk8wloI3RB4YOhOhBeMvc/YutG7olccv9b+BtZR2QGxUcNl3R+YFMYtZzixDBhDr6KAUfe66M94hUK43lcArbcXHVwlHYt23ZRIk3VL9kxWt0a2XTnt2LrEBJ7e0LqUvO9CwX1/ovhEKhNKDbuTBCwm/t15tvUPHYmiFyymv7HxdIta9dQp6+pkX6+dV+5bC2nR+IRWuEMdFJflhjiHMbFW5gwQrpKk4SvtksW1MjbZNnW1AmchbdFPJ5b4fZzHVLv1ppRAsqP9bExKt5qR3L/01EmvMkiK6MEoiYtW+/5lu/AY+H0vJfudd2kUS7M9fjVwhwFWAhh7NO/rqnclg==}"
+              scope: GLOBAL
+              username: "KonstantinKshnyakin"
+          - basicSSHUserPrivateKey:
+              id: "jenkins-gh2"
+              privateKeySource:
+                directEntry:
+                  privateKey: "{AQAAABAAAAGwHq0n30eW8WAdAnsnV8EDzj0x8J+guP4ooeOFURxJUlCk2Tqo9zMrBGa5vjad1msYMnQfqzoVMZXeuLTCZEcFOlWlgoNNNbMFwzEqMoT2OKSrnRzTwM6s05/X+UuC64eFZoUQSwIr85bYS98M8oi8H/amESQw1qF8in154qGtPTPeYm1dk28W/hYDGeCTs5yEWbyZdq3LgjVmjr1r/AQWhNs9SYrmcL1nPSyHZInIdgnkX5iThJz6yKnxxZziQJwT8QkCao4rQkKObyza3IMOa3R2oGjwJQNVHJhVh//KCzNzdg5cxTNPxPum5hHLvdKd10I2W25GQwuInJ2mIT5Ey/UGgQer5SjEQRg+6812PjP9huAz1/wNN9GEZL5+UdXrhWS8EjK59tV+cISexm/WDUBUwNJUuKA58soKB0GV0TnK1hBPkpUXg6+oHwlZA+O/MByFdj7Hd1/BQCFwTWgh18EkTEJF3LVO82qA1GUXdotzGdzUxGk9usAAqYpvGsaJcl3gDw9LlQwifINdodbRGtx+BNea0CZUlwJMSVTzV1tK9DLSezcdTdXlKYU/iXxRyNXf3A85+WC0ZISV0PYDoQ==}"
+              scope: GLOBAL
+              username: "KonstantinKshnyakin"
+          - string:
+              description: "telegram bot secret key"
+              id: "tg_key"
+              scope: GLOBAL
+              secret: "{AQAAABAAAAAwUwQIVafvAuFgwlljwq4vfmR0zgUF66y4nPF8Ul/a1vLr6Q0yjH7xHsyEnthY0rugDqx4aK15bXszvPxOOsCuvw==}"
+          - string:
+              description: "telegram chart id"
+              id: "tg_chart_id"
+              scope: GLOBAL
+              secret: "{AQAAABAAAAAQt+bayN8GAT8VhCNfBI8snS6Xz3FDaRvKJBeh3LsKH2U=}"
+jenkins:
+  agentProtocols:
+    - "JNLP4-connect"
+    - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  clouds:
+    - docker:
+        dockerApi:
+          connectTimeout: 60
+          dockerHost:
+            uri: "unix:///var/run/docker.sock"
+          readTimeout: 60
+        name: "docker-node"
+        templates:
+          - connector: "attach"
+            dockerTemplateBase:
+              cpuPeriod: 0
+              cpuQuota: 0
+              image: "localhost:5000/jenkins-node:1.0.0"
+              mounts:
+                - "type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock"
+                - "type=bind,src=/home/konstantin/jenkins/jenkins/jenkins_home/workspace,dst=/home/jenkins/workspace"
+              mountsString: |-
+                type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock
+                type=bind,src=/home/konstantin/jenkins/jenkins/jenkins_home/workspace,dst=/home/jenkins/workspace
+              network: "nw"
+            labelString: "docker-node-1"
+            name: "docker-node-1"
+            pullTimeout: 300
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+    - "hudson.util.DoubleLaunchChecker"
+  labelAtoms:
+    - name: "built-in"
+    - name: "docker-node-1"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  nodeMonitors:
+    - "architecture"
+    - "clock"
+    - diskSpace:
+        freeSpaceThreshold: "1GiB"
+        freeSpaceWarningThreshold: "2GiB"
+    - "swapSpace"
+    - tmpSpace:
+        freeSpaceThreshold: "1GiB"
+        freeSpaceWarningThreshold: "2GiB"
+    - "responseTime"
+  numExecutors: 0
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+        - id: "admin"
+          name: "admin"
+          properties:
+            - "consoleUrlProvider"
+            - "myView"
+            - preferredProvider:
+                providerId: "default"
+            - "theme"
+            - "timezone"
+            - "experimentalFlags"
+            - mailer:
+                emailAddress: "kocmoc007@gmail.com"
+            - "apiToken"
+  slaveAgentPort: 50000
+  updateCenter:
+    sites:
+      - id: "default"
+        url: "https://updates.jenkins.io/update-center.json"
+  views:
+    - list:
+        columns:
+          - "status"
+          - "weather"
+          - "jobName"
+          - "lastSuccess"
+          - "lastFailure"
+          - "lastDuration"
+          - "buildButton"
+        name: " View"
+    - list:
+        columns:
+          - "status"
+          - "weather"
+          - "jobName"
+          - "lastSuccess"
+          - "lastFailure"
+          - "lastDuration"
+          - "buildButton"
+        description: |-
+          QA Jobs
+          <!-- Managed by Jenkins Job Builder -->
+        filterExecutors: true
+        filterQueue: true
+        jobNames:
+          - "api-tests"
+          - "ui-tests"
+        name: "QA"
+    - all:
+        name: "all"
+  viewsTabBar: "standard"
+globalCredentialsConfiguration:
+  configuration:
+    providerFilter: "none"
+    typeFilter: "none"
+appearance:
+  locale:
+    ignoreAcceptLanguage: true
+    systemLocale: "ru"
+  pipelineGraphView:
+    showGraphOnBuildPage: false
+    showGraphOnJobPage: false
+  prism:
+    theme: PRISM
+  themeManager:
+    disableUserThemes: false
+    theme: "dark"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  cps:
+    hideSandbox: false
+  gitHooks:
+    allowedOnAgents: false
+    allowedOnController: false
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: "acceptFirstConnectionStrategy"
+  sSHD:
+    port: -1
+unclassified:
+  ansiColorBuildWrapper:
+    colorMaps:
+      - black: "#000000"
+        blackB: "#4C4C4C"
+        blue: "#1E90FF"
+        blueB: "#4682B4"
+        cyan: "#00CDCD"
+        cyanB: "#00FFFF"
+        green: "#00CD00"
+        greenB: "#00FF00"
+        magenta: "#CD00CD"
+        magentaB: "#FF00FF"
+        name: "xterm"
+        red: "#CD0000"
+        redB: "#FF0000"
+        white: "#E5E5E5"
+        whiteB: "#FFFFFF"
+        yellow: "#CDCD00"
+        yellowB: "#FFFF00"
+      - black: "#000000"
+        blackB: "#555555"
+        blue: "#0000AA"
+        blueB: "#5555FF"
+        cyan: "#00AAAA"
+        cyanB: "#55FFFF"
+        defaultBackground: 0
+        defaultForeground: 7
+        green: "#00AA00"
+        greenB: "#55FF55"
+        magenta: "#AA00AA"
+        magentaB: "#FF55FF"
+        name: "vga"
+        red: "#AA0000"
+        redB: "#FF5555"
+        white: "#AAAAAA"
+        whiteB: "#FFFFFF"
+        yellow: "#AA5500"
+        yellowB: "#FFFF55"
+      - black: "black"
+        blackB: "black"
+        blue: "blue"
+        blueB: "blue"
+        cyan: "cyan"
+        cyanB: "cyan"
+        green: "green"
+        greenB: "green"
+        magenta: "magenta"
+        magentaB: "magenta"
+        name: "css"
+        red: "red"
+        redB: "red"
+        white: "white"
+        whiteB: "white"
+        yellow: "yellow"
+        yellowB: "yellow"
+      - black: "#2E3436"
+        blackB: "#2E3436"
+        blue: "#3465A4"
+        blueB: "#3465A4"
+        cyan: "#06989A"
+        cyanB: "#06989A"
+        defaultBackground: 0
+        defaultForeground: 7
+        green: "#4E9A06"
+        greenB: "#4E9A06"
+        magenta: "#75507B"
+        magentaB: "#75507B"
+        name: "gnome-terminal"
+        red: "#CC0000"
+        redB: "#CC0000"
+        white: "#D3D7CF"
+        whiteB: "#D3D7CF"
+        yellow: "#C4A000"
+        yellowB: "#C4A000"
+  buildDiscarders:
+    configuredBuildDiscarders:
+      - "jobBuildDiscarder"
+  buildStepOperation:
+    enabled: false
+  email-ext:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: |-
+      $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+      Check console output at $BUILD_URL to view the results.
+    defaultContentType: "text/plain"
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    defaultTriggerIds:
+      - "hudson.plugins.emailext.plugins.trigger.FailureTrigger"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: -1
+    precedenceBulk: false
+    watchingEnabled: false
+  enrichedSummaryConfig:
+    enrichedSummaryEnabled: false
+    httpClientDelayBetweenRetriesInSeconds: 1
+    httpClientMaxRetries: 3
+    httpClientTimeoutInSeconds: 1
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://192.168.1.124/jenkins/github-webhook/"
+  globalTimeOutConfiguration:
+    operations:
+      - "abortOperation"
+    overwriteable: false
+  injectionConfig:
+    allowUntrusted: false
+    checkForBuildAgentErrors: false
+    enabled: false
+    enforceUrl: false
+    gradleCaptureTaskInputFiles: true
+    injectCcudExtension: false
+    injectMavenExtension: false
+    mavenCaptureGoalInputFiles: true
+  junitTestResultStorage:
+    storage: "file"
+  location:
+    adminAddress: "адрес еще не настроен <nobody@nowhere>"
+    url: "http://192.168.1.124/jenkins/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  pollSCM:
+    pollingThreadCount: 10
+  scmGit:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  timestamper:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+tool:
+  allure:
+    installations:
+      - name: "allure-v2.27.0"
+        properties:
+          - installSource:
+              installers:
+                - allureCommandlineInstaller:
+                    id: "2.27.0"
+  git:
+    installations:
+      - home: "git"
+        name: "Default"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"

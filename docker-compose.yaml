@@ -1,0 +1,138 @@
+services:
+
+  selenoid-node1:
+    container_name: 'selenoid-node1'
+    image: 'aerokube/selenoid:1.11.3'
+    restart: always
+    networks:
+      - nw
+      - selenoid-nw1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./selenoid/browsers.json:/etc/selenoid/browsers.json:ro
+    command:
+      - '-container-network=selenoid-nw1'
+      - '-limit=5'
+
+  selenoid-node2:
+    container_name: 'selenoid-node2'
+    image: 'aerokube/selenoid:1.11.3'
+    restart: always
+    networks:
+      - nw
+      - selenoid-nw2
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./selenoid/browsers.json:/etc/selenoid/browsers.json:ro
+    command:
+      - '-container-network=selenoid-nw2'
+      - '-limit=5'
+
+  ggr:
+    container_name: 'ggr'
+    image: 'aerokube/ggr:1.7.2'
+    restart: always
+    depends_on:
+      - selenoid-node1
+      - selenoid-node2
+    networks:
+      - nw
+    volumes:
+      - ./selenoid/grid-router:/etc/grid-router:ro
+    command:
+      - '-guests-allowed'
+      - '-verbose'
+
+  ggr-ui:
+    container_name: 'ggr-ui'
+    image: 'aerokube/ggr-ui:1.2.0'
+    restart: always
+    depends_on:
+      - selenoid-node1
+      - selenoid-node2
+    networks:
+      - nw
+    volumes:
+      - ./selenoid/grid-router/quota:/etc/grid-router/quota:ro
+
+  selenoid-ui:
+    container_name: 'selenoid-ui'
+    image: 'aerokube/selenoid-ui:1.10.11'
+    restart: always
+    depends_on:
+      - ggr-ui
+    networks:
+      - nw
+    command:
+      - '--selenoid-uri=http://ggr-ui:8888'
+
+  registry:
+    image: registry:2.8.3
+    container_name: registry
+    restart: always
+    networks:
+      - nw
+    volumes:
+      - ./registry:/var/lib/registry
+    ports:
+      - '5000:5000'
+    environment:
+      - REGISTRY_STORAGE_DELETE_ENABLED=true
+
+  registry-ui:
+    image: joxit/docker-registry-ui:2.5.7
+    container_name: registry-ui
+    restart: always
+    depends_on:
+      - registry
+    networks:
+      - nw
+    ports:
+      - '5001:80'
+    environment:
+      - NGINX_PROXY_PASS_URL=http://registry:5000
+      - DELETE_IMAGES=true
+      - NGINX_PROXY_PASS_URL=true
+
+  jenkins:
+    image: jenkins/jenkins:2.479
+    container_name: jenkins
+    restart: always
+    user: root
+    privileged: true
+    ports:
+      - '8080:8080'
+    networks:
+      - nw
+    environment:
+      - JENKINS_OPTS="--prefix=/jenkins"
+      - JAVA_OPTS="-Dhudson.model.DownloadService.noSignatureCheck=true"
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - ./jenkins/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  nginx:
+    container_name: 'nginx'
+    image: 'nginx:stable-alpine3.20'
+    restart: always
+    depends_on:
+      - selenoid-ui
+      - ggr
+      - jenkins
+      - registry-ui
+    networks:
+      - nw
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx:/etc/nginx/conf.d:ro
+
+
+networks:
+  nw:
+    name: 'nw'
+  selenoid-nw1:
+    name: 'selenoid-nw1'
+  selenoid-nw2:
+    name: 'selenoid-nw2'

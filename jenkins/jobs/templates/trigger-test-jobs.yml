@@ -1,0 +1,9 @@
+- job-template:
+    name: 'trigger-test-jobs'
+    project-type: pipeline
+    pipeline-scm:
+      scm:
+        - git:
+            url: https://github.com/KonstantinKshnyakin/otus-java-qa-pro-jenkins.git
+            branches:
+              - 'master'

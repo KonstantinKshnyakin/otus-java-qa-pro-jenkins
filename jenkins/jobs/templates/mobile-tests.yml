@@ -1,0 +1,9 @@
+- job-template:
+    name: 'mobile-tests'
+    project-type: pipeline
+    pipeline-scm:
+      scm:
+        - git:
+            url: https://github.com/KonstantinKshnyakin/otus-java-qa-pro-mobile.git
+            branches:
+              - 'master'
