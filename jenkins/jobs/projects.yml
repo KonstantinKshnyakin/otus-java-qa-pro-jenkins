@@ -6,3 +6,4 @@
       - 'api-tests'
       - 'mobile-tests'
       - 'trigger-test-jobs'
+      - 'build-images'

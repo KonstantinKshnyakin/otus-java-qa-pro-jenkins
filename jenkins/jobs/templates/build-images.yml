@@ -1,5 +1,5 @@
 - job-template:
-    name: 'trigger-test-jobs'
+    name: 'build-images'
     project-type: pipeline
     pipeline-scm:
       scm:
@@ -7,4 +7,4 @@
             url: https://github.com/KonstantinKshnyakin/otus-java-qa-pro-jenkins.git
             branches:
               - 'master'
-      script-path: "./Jenkinsfile-trigger-test-jobs"
+      script-path: "./Jenkinsfile-build-images"

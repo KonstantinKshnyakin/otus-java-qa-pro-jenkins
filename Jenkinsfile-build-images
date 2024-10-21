@@ -1,0 +1,95 @@
+properties([
+            disableConcurrentBuilds(),
+            buildDiscarder(logRotator(numToKeepStr: '5')),
+            parameters([
+                    booleanParam(name: 'EnableANSIColor', defaultValue: true),
+                    string(name: "branch", defaultValue: "master", trim: true),
+                    string(name: "registry_url", defaultValue: "localhost:5000", trim: true),
+                    choice(name: 'project', choices: ['ui-tests', 'api-tests', 'mobile-tests']),
+                    string(name: "image_version", trim: true)
+            ])
+])
+
+def tag
+pipeline {
+
+    agent {
+        label 'docker-node-1'
+    }
+
+    options {
+        timeout(time: 15, unit: 'MINUTES')
+    }
+
+    stages {
+        stage('Checkout git') {
+            steps {
+                script {
+                    def project_url
+                    if (params.project.equals('ui-tests')) {
+                        project_url = 'https://github.com/KonstantinKshnyakin/otus-java-qa-pro.git'
+                    } else if(params.project.equals('api-tests')) {
+                        project_url = 'https://github.com/KonstantinKshnyakin/otus-java-qa-pro-api.git'
+                    } else if(params.project.equals('api-tests')) {
+                        project_url = 'https://github.com/KonstantinKshnyakin/otus-java-qa-pro-mobile.git'
+                    }
+                    git branch: "${params.branch}", url: project_url
+                }
+            }
+        }
+
+        stage('Build image') {
+            steps {
+                script {
+                    def pom = readMavenPom file: 'pom.xml'
+                    tag = pom.version
+                    if (!params.branch.equals('master')) {
+                        tag += "-${params.branch}"
+                    }
+                    if (params.image_version?.trim()) {
+                        tag = params.image_version
+                    }
+                    sh "docker build -t ${params.registry_url}/${params.project}:${tag} ."
+                }
+            }
+        }
+
+        stage('Push image') {
+            steps {
+                script {
+                    sh "docker push ${params.registry_url}/${params.project}:${tag}"
+                }
+            }
+        }
+    }
+
+    post {
+      success { buildMessageAndSendTelegram('🚀', 'Success') }
+      unstable { buildMessageAndSendTelegram('💣', 'Unstable') }
+      failure { buildMessageAndSendTelegram('💥', 'Failure') }
+      aborted { buildMessageAndSendTelegram('😥', 'Aborted') }
+    }
+
+}
+
+def buildMessageAndSendTelegram(smiley, status) {
+    message = "${smiley}\n Job Name: ${JOB_NAME} \nBuild: ${BUILD_DISPLAY_NAME} \nStatus: ${status}"
+    message += "\nLog: ${env.BUILD_URL}console"
+    sendTelegram(message)
+    cleanWs()
+}
+
+def sendTelegram(message) {
+    withCredentials([
+        string(credentialsId: 'tg_key', variable: 'TG_KEY'),
+        string(credentialsId: 'tg_chart_id', variable: 'TG_CHART_ID')
+    ]) {
+    sh """
+      curl -X POST -H 'Content-Type: application/json' -d '{
+          "chat_id": ${TG_CHART_ID},
+          "text": "${message}",
+          "disable_notification": false
+      }' https://api.telegram.org/bot${TG_KEY}/sendMessage
+      """
+    }
+}
