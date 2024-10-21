@@ -9,7 +9,7 @@ properties([
                     choice(name: 'ui_browser', choices: ['chrome', 'opera']),
                     string(name: "ui_browser_version", defaultValue: "127.0", trim: true),
                     string(name: "ui_selenoid_url", defaultValue: "http://192.168.1.124/wd/hub", trim: true),
-                    string(name: "ui_image_version", defaultValue: "1.0.1", trim: true),
+                    string(name: "ui_image_version", defaultValue: "1.0.0", trim: true),
                     string(name: "api_image_version", defaultValue: "1.0.0", trim: true),
                     string(name: "mobile_platform_name", defaultValue: "android", trim: true),
                     string(name: "mobile_platform_version", defaultValue: "9.0", trim: true),
@@ -40,7 +40,7 @@ pipeline {
                     steps {
                         script {
                             if (params.run_ui_test) {
-                                build job: 'ui-test',
+                                build job: 'ui-tests',
                                 wait: false,
                                 parameters: [
                                     booleanParam(name: 'EnableANSIColor', value: "${EnableANSIColor}"),
